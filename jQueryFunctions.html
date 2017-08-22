@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQueryFunctions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#clickbutton").click(function(){
+                    alert("You clicked the alert button");
+                });
+                $("#hidebutton").click(function(){
+                    $("#hideshow").hide(1000);
+                });
+                $("#showbutton").click(function(){
+                    $("#hideshow").show(1000);
+                });
+                $("#togglebutton").click(function(){
+                    $("#toggle").toggle(1000);
+                });
+                $("#slidedownbutton").click(function(){
+                    $(".slide").slideDown(1000);
+                });
+                $("#slideupbutton").click(function(){
+                    $(".slide").slideUp(1000);
+                });
+                $("#slidetogglebutton").click(function(){
+                    $(".slide").slideToggle(1000);
+                });
+                $("#fadeinbutton").click(function(){
+                    $(".fade").fadeIn(1000);
+                });
+                $("#fadeoutbutton").click(function(){
+                    $(".fade").fadeOut(1000);
+                });
+                $("#addclassbutton").click(function(){
+                    $("h1").addClass("add");
+                });
+                $("#beforebutton").click(function(){
+                    $(".add").before("<button>Button</button>");
+                });
+                $("#afterbutton").click(function(){
+                    $(".add").after("<button>Button</button>");
+                });
+                $("#appendbutton").click(function(){
+                    $(".add").append("app");
+                });
+                $("#htmlbutton").click(function(){
+                    $(".add").html("<button>HTML</button>");
+                });
+                $("#attrbutton").click(function(){
+                    $("h1").attr("class", "attr");
+                });
+                $("#valbutton").click(function(){
+                    $("#val").val("nothing");
+                });
+                $("#textbutton").click(function(){
+                    $(".attr").text("text");
+                });
+                $("body").data("test", "This is the last function to test!");
+                $("#databutton").click(function(){
+                    alert($("body").data("test"));
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Click</h1>
+        <button id="clickbutton">Click</button><p id="click">Click the button to get an alert</p>
+        <h1>Hide</h1>
+        <button id="hidebutton">Hide</button><p id="hideshow">Click the button to hide this paragraph</p>
+        <h1>Show</h1>
+        <button id="showbutton">Show</button><p>Click the button to show the previous functions's paragraph after hiding it</p>
+        <h1>Toggle</h1>
+        <button id="togglebutton">Toggle</button><p id="toggle">Click the button to toggle the visibility of this paragraph</p>
+        <h1>SlideDown</h1>
+        <button id="slidedownbutton">SlideDown</button><p class="slide">Click the button to slide down the page and reveal the paragraphs of these slide functions</p>
+        <h1>SlideUp</h1>
+        <button id="slideupbutton">SlideUp</button><p class="slide">Click the button to slide up the page and hide the paragraphs of these slide functions</p>
+        <h1>SlideToggle</h1>
+        <button id="slidetogglebutton">SlideToggle</button><p class="slide">Click the button to toggle the visibility of the paragraphs of these slide functions by sliding</p>
+        <h1>FadeIn</h1>
+        <button id="fadeinbutton">FadeIn</button><p class="fade">Click the button to fade the paragraphs of these fade functions in</p>
+        <h1>FadeOut</h1>
+        <button id="fadeoutbutton">FadeOut</button><p class="fade">Click the button to fade the paragraphs of these fade functions out</p>
+        <h1>AddClass</h1>
+        <button id="addclassbutton">AddClass</button><p>Click the button to add the "add" class to the headers</p>
+        <h1>Before</h1>
+        <button id="beforebutton">Before</button><p>Click the button to add a button before every "add" classed item</p>
+        <h1>After</h1>
+        <button id="afterbutton">After</button><p>Click the button to add a button after every "add" classed item</p>
+        <h1>Append</h1>
+        <button id="appendbutton">Append</button><p>Click the button to append "app" to each "add" classed item</p>
+        <h1>Html</h1>
+        <button id="htmlbutton">Html</button><p>Click the button to change all "add" classed items into buttons named "HTML"</p>
+        <h1>Attr</h1>
+        <button id="attrbutton">Attr</button><p>Click the button to change the class attribute of the headers to "attr"</p>
+        <h1>Val</h1>
+        <button id="valbutton">Val</button><p>Click the button to change the value of the textbox to "nothing"</p><input id=val type="text" value="Click the button">
+        <h1>Text</h1>
+        <button id="textbutton">Text</button><p>Click the button to have all text of "attr" classed items become "text"</p>
+        <h1>Data</h1>
+        <button id="databutton">Data</button><p>Click this button to return what was stored</p>
+    </body>
+</html>
